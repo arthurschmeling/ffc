@@ -68,7 +68,7 @@ body {
   border: none;
   box-shadow: none;
   padding: 0;
-  width: 140px;
+  width: 100px;
   min-height: unset;
   position: relative;
   overflow: visible;
@@ -81,17 +81,21 @@ body {
 
 .lixeira-label {
   font-family: 'Arial Black', Arial, sans-serif;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   color: var(--green-dark);
   background: linear-gradient(90deg, #bbf7d0 0%, #4ade80 100%);
-  border-radius: 12px;
-  padding: 4px 10px;
-  margin-top: 6px;
+  border-radius: 10px;
+  padding: 2px 6px;
+  margin-top: 4px;
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   box-shadow: 0 2px 8px rgba(34,197,94,0.10);
   display: inline-block;
   border: 2px solid var(--green-accent);
+  max-width: 90px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .lixeira img {
@@ -260,6 +264,15 @@ body {
         gap: 0.7rem;
     }
 
+    .lixeira {
+        width: 70px;
+    }
+    .lixeira-label {
+        font-size: 0.7rem;
+        padding: 2px 4px;
+        max-width: 60px;
+    }
+
     .pontuacao-box {
         top: 20px;
         right: 20px;
@@ -281,26 +294,31 @@ body {
 
 @media (max-width: 480px) {
     .lixo {
-        width: 80px;
-        height: 80px;
-        font-size: 0.7rem;
+        width: 60px;
+        height: 60px;
+        font-size: 0.6rem;
     }
 
     .lixeira {
-        width: 100px;
+        width: 70px;
+    }
+    .lixeira-label {
+        font-size: 0.55rem;
+        padding: 1px 2px;
+        max-width: 25px;
     }
 
     .pontuacao-box {
         font-size: 1.3rem;
         padding: 8px 16px;
-        top: 10px;
-        right: 10px;
-        margin-bottom: 60px;
+        top: 5px;
+        right: 5px;
+        margin-bottom: 40px;
     }
     .vidas-box {
         font-size: 1.1rem;
         padding: 8px 16px;
-        top: 70px;
+        top: 50px;
         left: 10px;
         margin-bottom: 60px;
     }
@@ -321,7 +339,7 @@ body {
 }
 
 /* Indicação para arrastar no mobile */
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     .lixo {
         touch-action: pan-x pan-y;
     }
@@ -336,3 +354,4 @@ body {
         white-space: normal;
     }
 }
+
